@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  deep-research:
+    container_name: deep-research
+    build: .
+    env_file:
+      - .env
+    ports:
+      - "3051:3051"
+    volumes:
+      - .:/app
+    restart: unless-stopped
