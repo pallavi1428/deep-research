@@ -15,25 +15,6 @@ Deep Research is a command-line tool that automates recursive web research using
 
 ---
 
-![Deep Research Demo](Demo.png) 
-
-## 🌟 Key Features
-
-- **Intelligent Research Automation**
-  - Multi-level recursive research with adjustable depth/breadth
-  - Dynamic follow-up question generation
-  - Context-aware result synthesis
-
-- **Flexible Integration**
-  - Supports OpenAI, local LLM endpoints, and Fireworks (DeepSeek R1)
-  - Async Firecrawl search with markdown content extraction
-  - Both API (FastAPI) and CLI interfaces
-
-- **Customizable Outputs**
-  - Concise answers for quick insights
-  - Detailed long-form reports with citations
-  - Markdown format for easy integration
-
 ## 🚀 Quick Start
 
 ### Prerequisites
@@ -71,12 +52,6 @@ Follow the interactive prompts to conduct your research.
 python main_gradio.py
 ```
 Access the intuitive web UI at `http://localhost:7860`
-
-#### API Mode
-```bash
-uvicorn api:app --reload
-```
-Access API documentation at `http://localhost:8000/docs`
 
 ## ⚙️ Configuration
 
