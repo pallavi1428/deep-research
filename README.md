@@ -30,3 +30,5 @@ Deep Research is a command-line tool that automates recursive web research using
 ```bash
 git clone https://github.com/yourname/deep-research.git
 cd deep-research
+```
+2. **Update .env**

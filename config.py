@@ -1,8 +1,9 @@
 import os
 from dotenv import load_dotenv
 
-# Load environment variables from .env file
-load_dotenv()
+# Force load .env from project directory
+dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
+load_dotenv(dotenv_path=dotenv_path)
 
 # Firecrawl
 FIRECRAWL_KEY = os.getenv("FIRECRAWL_KEY", "")
@@ -20,3 +21,7 @@ FIREWORKS_KEY = os.getenv("FIREWORKS_KEY", "")
 
 # App Config
 PORT = int(os.getenv("PORT", "3051"))
+
+# Debugging
+#print(f"Firecrawl Key: {FIRECRAWL_KEY}")
+#print(f"OpenAI Key: {OPENAI_KEY}")
