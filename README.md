@@ -1,8 +1,8 @@
 # 🔍 Deep Research (Python Edition)
 ---
-Deep Research is a command-line tool that automates recursive web research using SERP queries, scraping, and LLM summarization. It’s built using FastAPI, Python, and integrates with Firecrawl and OpenAI.
 ![Deep Research Demo](Demo.png)
 ---
+Deep Research is a command-line tool that automates recursive web research using SERP queries, scraping, and LLM summarization. It’s built using FastAPI, Python, and integrates with Firecrawl and OpenAI.
 
 ## 🧠 Features
 
