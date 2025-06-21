@@ -31,4 +31,7 @@ Deep Research is a command-line tool that automates recursive web research using
 git clone https://github.com/yourname/deep-research.git
 cd deep-research
 ```
-2. **Update .env**
+2. **Update .env.template**
+- Update .env.template to .env with API keys
+
+3. **main.py and main_cli.py**
