@@ -89,3 +89,5 @@ The FastAPI server provides these endpoints:
 - `GET /status/{task_id}` - Check research progress
 - `GET /results/{task_id}` - Retrieve completed research
 
+## 📜 License
+Distributed under the MIT License. See LICENSE for more information.
