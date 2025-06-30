@@ -49,9 +49,9 @@ python main.py
 ```
 Follow the interactive prompts to conduct your research.
 
-#### Gradio Web Interface
+#### CLI with pdf
 ```bash
-python main_gradio.py
+python main_pdf.py
 ```
 Access the intuitive web UI at `http://localhost:7860`
 
