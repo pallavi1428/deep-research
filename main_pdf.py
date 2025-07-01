@@ -1,4 +1,3 @@
-# Updated main.py
 import asyncio
 import sys
 from datetime import datetime
@@ -6,7 +5,7 @@ from pathlib import Path
 from feedback import generate_feedback
 from research import deep_research
 from report import write_final_answer, write_final_report
-from pdf_generator import PDFReportGenerator  
+from pdf_generator import PDFReportGenerator
 
 def ask(question: str, default: str = "") -> str:
     try:
@@ -18,8 +17,8 @@ def ask(question: str, default: str = "") -> str:
 
 async def main():
     query = ask("What would you like to research?")
-    breadth = int(ask("Enter research breadth (2–10, default 4):", "4"))
-    depth = int(ask("Enter research depth (1–5, default 2):", "2"))
+    breadth = int(ask("Enter research breadth (2-10, default 4):", "4"))
+    depth = int(ask("Enter research depth (1-5, default 2):", "2"))
     mode = ask("Do you want a long report or a short answer? (report/answer)", "report").lower()
 
     if mode == "report":
@@ -64,10 +63,13 @@ async def main():
             f.write(report)
             
         # Generate PDF
-        pdf_gen = PDFReportGenerator()
-        pdf_gen.generate_from_markdown(report, pdf_filename)
-        
-        print(f"✅ Report saved to {md_filename} and {pdf_filename}")
+        try:
+            pdf_gen = PDFReportGenerator()
+            pdf_gen.generate_from_markdown(report, pdf_filename)
+            print(f"✅ Report saved to {md_filename} and {pdf_filename}")
+        except Exception as e:
+            print(f"⚠️ PDF generation failed: {str(e)}")
+            print(f"✅ Markdown report saved to {md_filename}")
     else:
         print("\nWriting final answer...")
         answer = write_final_answer(combined_query, learnings)
@@ -79,10 +81,13 @@ async def main():
             f.write(answer)
             
         # Generate PDF
-        pdf_gen = PDFReportGenerator()
-        pdf_gen.generate_from_markdown(answer, pdf_filename)
-        
-        print(f"✅ Answer saved to {md_filename} and {pdf_filename}")
+        try:
+            pdf_gen = PDFReportGenerator()
+            pdf_gen.generate_from_markdown(answer, pdf_filename)
+            print(f"✅ Answer saved to {md_filename} and {pdf_filename}")
+        except Exception as e:
+            print(f"⚠️ PDF generation failed: {str(e)}")
+            print(f"✅ Markdown answer saved to {md_filename}")
 
 if __name__ == "__main__":
     asyncio.run(main())
