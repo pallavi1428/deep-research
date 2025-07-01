@@ -18,8 +18,8 @@ class PDFReport(FPDF):
     def __init__(self):
         super().__init__()
         self.set_auto_page_break(auto=True, margin=15)
-        self.add_font('DejaVu', '', 'DejaVuSansCondensed.ttf', uni=True)
-        self.add_font('DejaVu', 'B', 'DejaVuSansCondensed-Bold.ttf', uni=True)
+        self.add_font('DejaVu', '', 'DejaVuSans.ttf')
+        self.add_font('DejaVu', 'B', 'DejaVuSans-Bold.ttf')
         self.set_font('DejaVu', '', 12)
     
     def header(self):
