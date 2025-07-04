@@ -8,7 +8,7 @@ from config import (
 )
 
 class LanguageModel:
-    def __init__(self, model_name: str = "gpt-4-turbo", base_url: str = OPENAI_ENDPOINT):
+    def __init__(self, model_name: str = "gpt-4o", base_url: str = OPENAI_ENDPOINT):
         if not OPENAI_KEY:
             raise ValueError("OpenAI API key is missing in configuration")
             
